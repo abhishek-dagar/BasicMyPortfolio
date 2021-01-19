@@ -1,0 +1,315 @@
+body{
+    margin: 0;
+    font-size: 18px;
+    height: 100vh;
+}
+.maincontainer{
+    display: flex;
+    flex-direction: column;
+}
+.mycontainer{
+    margin: 0;
+    background: url('../../images/bg1.jpg') no-repeat center center / cover;
+    width: 100%;
+    height: 100vh;
+    nav{
+        position: fixed;
+        width: 100%;
+        background: #181818;
+        .navbar-brand{
+            font-size: 2rem;
+            color: white;
+        }
+        .nav-link{
+            font-size: 17px;
+            text-align: center;
+            font-weight: lighter;
+            color: white;
+        }
+        .nav-link:hover{
+            // background: rgb(0, 133, 241);
+            // border-radius: 15px;
+            color: #08fdd8;
+        }
+        .navbar-toggler{
+            background-color: #ffffff;
+            .menubar{
+                width: 35px;
+                height: 5px;
+                background-color: black;
+                margin: 6px 0;
+                border-radius: 3px;
+            }
+        }
+        
+    }
+    .bg{
+        margin: 0;
+        .bgtext{
+            .lineing{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                h1{
+                    text-align: center;
+                    font-size: 5rem;
+                    font-family: consolas;
+                    .txt-type > .txt {
+                        border-right: 0.2rem solid #777;
+                      }
+                }
+                h3{
+                    text-align: center;
+                    
+                }
+                
+            }
+        }
+    }
+}
+.aboutcontainer{
+    width: 100%;
+    height: 100vh;
+    // background: #252525;
+    background: url('../../images/bg2.jpg') no-repeat center center / cover;
+    display: flex;
+    flex-direction: row;
+    .writing{
+        width: 100%;
+        height: 89vh;
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        .hex{
+            align-self:center;
+            width: 200px;
+            height: 200px;
+            background-color: #6C6;
+            border-radius: 7rem;
+            background : url('../../images/myphoto.jpg') no-repeat center center / cover;
+        }
+        h1{
+            text-align: center;
+            font-size: 4rem;
+            color: #08fdd8;
+        }
+        h4{
+            text-align: center;
+            top: 50%;
+            color: white;
+            margin-top:4rem;
+        }
+    }
+    .skills{
+        width: 75%;
+        height: 75vh;
+        margin-top: 100px;
+        // border: 2px solid black;
+        margin-right: 7rem;
+        border-radius: 5rem;
+        background: #1b1a1a;
+        // background: url('../../images/bg3.jpg') no-repeat center center / cover;
+        box-shadow: 5px 5px 5px rgb(34, 32, 32);
+        box-sizing: content-box;
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            color:  #08fdd8;
+        }
+        p{
+            margin-left: 7rem;
+            font-size: 19px;
+            font-weight: bold;
+            color: #08fdd8;
+        }
+        .skillsnames{
+            margin-left: 8rem;
+            margin-top: -1rem;
+            font-weight: lighter;
+            color: white;
+
+        }
+    }
+}
+@media (max-width: 978px){
+    .mycontainer{
+        .bg{
+            .bgtext{
+                .lineing{
+                    width: 70%;
+                    h1{
+                        font-size: 2rem;
+                    }
+                    h3{
+                        font-size: 14px;
+                    }
+
+                }
+            }
+        }
+        nav{
+            .navbar-expand-lg{
+                background: #181818;
+                color: white;
+            }
+            .navbar-brand{
+                background : url('../../images/logo.jpg') no-repeat center center / cover;
+                width: 52px;
+                height: 52px;
+                margin-left: 10px;
+                border-radius: 27px;
+            }
+            #home:after{
+                position: absolute;
+                content: "Home";
+                width: 10%;
+            }
+            #about:after{
+                position: absolute;
+                content: "About";
+                width: 10%;
+            }
+            #projects:after{
+                position: absolute;
+                content: "Projects";
+                width: 12%;
+            }
+            #contact:after{
+                position: absolute;
+                content: "Contact";
+                width: 12%;
+            }
+        }
+    }
+    .aboutcontainer{
+        flex-direction: column;
+        height: 170vh;
+        align-items: center;
+        .writing{
+            align-items: center;
+            width: 100%;
+            height: 80vh;
+        }
+        .skills{
+            margin: 2px;
+            height: 75vh;
+            width: 90%;
+            align-items: center;
+            h1{
+                text-align: center;
+                font-size: 3rem;
+                color:  #08fdd8;
+            }
+            p{
+                text-align: center;
+                margin-left: 0rem;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            .skillsnames{
+                margin-left: 0rem;
+                margin-top: -1rem;
+    
+            }
+        }
+    }
+}
+
+@media (min-width: 978px){
+    .mycontainer{
+        nav{
+            background: #181818;
+            height: 100vh;
+            flex-direction: column;
+            width: 3%;
+            box-sizing: content-box;
+            .navbar-nav{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 9rem;
+                
+            }
+            .navbar-brand{
+                background : url('../../images/logo.jpg') no-repeat center center / cover;
+                width: 52px;
+                height: 52px;
+                margin-left: 10px;
+                border-radius: 27px;
+            }
+            .nav-link{
+                margin-top: 2rem;
+            }
+            #home{
+                overflow: hidden;
+            }
+            #home:after{
+                position: absolute;
+                content: "Home";
+                width: 100%;
+                opacity: 0%;
+                right: 0;
+            }
+            #home:hover:after{
+                width: 100%;
+                opacity: 1;
+                transition: all 0.3s ease-out;
+                display: block;
+            }
+            #about{
+                overflow: hidden;
+            }
+            #about:after{
+                position: absolute;
+                content: "About";
+                width: 100%;
+                opacity: 0%;
+                right: 0;
+            }
+            #about:hover:after{
+                width: 100%;
+                opacity: 1;
+                transition: all 0.3s ease-out;
+                display: block;
+            }
+            #projects{
+                overflow: hidden;
+            }
+            #projects:after{
+                position: absolute;
+                content: "Projects";
+                width: 100%;
+                opacity: 0%;
+                right: 0;
+            }
+            #projects:hover:after{
+                width: 100%;
+                opacity: 1;
+                transition: all 0.3s ease-out;
+                display: block;
+            }
+            #contact{
+                overflow: hidden;
+            }
+            #contact:after{
+                position: absolute;
+                content: "Contact";
+                width: 100%;
+                opacity: 0%;
+                right: 0;
+            }
+            #contact:hover:after{
+                width: 100%;
+                opacity: 1;
+                transition: all 0.3s ease-out;
+                display: block;
+            }
+        }
+        .navbar-expand-lg{
+            background: #181818;
+            color: white;
+        }
+    }
+}
