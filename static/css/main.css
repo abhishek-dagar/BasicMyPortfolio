@@ -363,7 +363,7 @@ body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row;
+            flex-direction: column;
   }
   .projectsection .projectmaincontainer .projectcontainer .content .imgbx {
     width: 50%;
