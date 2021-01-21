@@ -25,6 +25,8 @@ body {
   position: fixed;
   width: 100%;
   background: #181818;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .mycontainer nav .navbar-brand {
@@ -56,7 +58,18 @@ body {
 }
 
 .mycontainer .bg {
-  margin: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50%;
+  height: 76vh;
+  margin: 5rem auto;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3em;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .mycontainer .bg .bgtext .lineing {
@@ -66,6 +79,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: white;
+  width: 100%;
 }
 
 .mycontainer .bg .bgtext .lineing h1 {
@@ -133,16 +147,19 @@ body {
 }
 
 .aboutcontainer .skills {
-  width: 75%;
+  width: 65%;
   height: 75vh;
   margin-top: 100px;
   margin-right: 7rem;
   border-radius: 5rem;
-  background: #1b1a1a;
+  background: rgba(255, 255, 255, 0.2);
   -webkit-box-shadow: 5px 5px 5px #222020;
           box-shadow: 5px 5px 5px #222020;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  overflow: auto;
 }
 
 .aboutcontainer .skills h1 {
@@ -165,7 +182,96 @@ body {
   color: white;
 }
 
+.projectsection {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0390e2), to(#04ecd9));
+  background: linear-gradient(#0390e2, #04ecd9);
+}
+
+.projectsection .projectmaincontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 6%;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 0px 0px 2px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 93%;
+}
+
+.projectsection .projectmaincontainer .projectcontainer {
+  width: 390px;
+  height: 400px;
+  background: white;
+  margin: 20px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 12px;
+  -webkit-box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.projectsection .projectmaincontainer .projectcontainer .content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.5%;
+  transition: 0.5%;
+}
+
+.projectsection .projectmaincontainer .projectcontainer .content .imgbx {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.projectsection .projectmaincontainer .projectcontainer .content .imgbx img {
+  border-radius: 74px;
+  width: 150px;
+  height: 150px;
+}
+
+.projectsection .projectmaincontainer .projectcontainer .content .contentBx {
+  text-align: center;
+  color: #020202;
+}
+
 @media (max-width: 978px) {
+  .mycontainer .bg {
+    width: 57%;
+    height: 57vh;
+    margin: 12rem auto;
+  }
   .mycontainer .bg .bgtext .lineing {
     width: 70%;
   }
@@ -245,6 +351,28 @@ body {
   .aboutcontainer .skills .skillsnames {
     margin-left: 0rem;
     margin-top: -1rem;
+  }
+  .projectsection .projectmaincontainer {
+    margin: 1rem auto;
+  }
+  .projectsection .projectmaincontainer .projectcontainer {
+    width: 98%;
+    height: auto;
+  }
+  .projectsection .projectmaincontainer .projectcontainer .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .projectsection .projectmaincontainer .projectcontainer .content .imgbx {
+    width: 50%;
+    height: 50%;
+    margin: 1rem;
+  }
+  .projectsection .projectmaincontainer .projectcontainer .content .imgbx img {
+    width: 50%;
+    height: 50%;
   }
 }
 
